@@ -84,7 +84,7 @@ async function getTotalSupply() {
   }
 
   try {
-    const url = `https://api.bscscan.com/api?module=stats&action=tokensupply&contractaddress=${cgptContractAddress}&apikey=${apiKey}`;
+    const url = `https://api.etherscan.io/v2/api?chainid=56&module=stats&action=tokensupply&contractaddress=${cgptContractAddress}&apikey=${apiKey}`;
     const response = await axios.get(url);
     const result = response.data.result;
 
@@ -112,7 +112,7 @@ app.get('/', async (req, res) => {
       
         await new Promise(resolve => setTimeout(resolve, 250));
 
-      const url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
+      const url = `https://api.etherscan.io/v2/api?chainid=56&module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
       const response = await axios.get(url);
       const balance = parseInt(response.data.result);
 
@@ -282,7 +282,7 @@ app.get('/supply', async (req, res) => {
       // Introduce a delay of 250ms (1 second / 4) between each API call
       await new Promise(resolve => setTimeout(resolve, 250));
 
-      const url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
+      const url = `https://api.etherscan.io/v2/api?chainid=56&module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
       const response = await axios.get(url);
       const balance = parseInt(response.data.result);
 
@@ -334,7 +334,7 @@ app.get('/totalsupply', async (req, res) => {
     for (const { address, chain, type, wallet, name } of contractAddresses) {
         await new Promise(resolve => setTimeout(resolve, 250));
 
-      const url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
+      const url = `https://api.etherscan.io/v2/api?chainid=56&module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
       const response = await axios.get(url);
       const balance = parseInt(response.data.result);
 
@@ -387,7 +387,7 @@ app.get('/burn', async (req, res) => {
     for (const { address, chain, type, wallet, name } of contractAddresses) {
         await new Promise(resolve => setTimeout(resolve, 250));
 
-      const url = `https://api.bscscan.com/api?module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
+      const url = `https://api.etherscan.io/v2/api?chainid=56&module=account&action=tokenbalance&contractaddress=${cgptContractAddress}&address=${address}&tag=latest&apikey=${apiKey}`;
       const response = await axios.get(url);
       const balance = parseInt(response.data.result);
 
