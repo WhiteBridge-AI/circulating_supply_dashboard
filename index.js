@@ -21,61 +21,72 @@ const cache = new NodeCache({ stdTTL: 600 }); // Set the cache expiration time t
 // List of contract addresses with additional information
 const contractAddresses = [
   {
-    address: '0x1f7bAAf93e0449394e80f3A24c14fB2fA667495c',
+    address: '0xa555b81736a9b1376dfcaa3bcbbeb56da4882b11',
+    chain: 'BSC',
+    type: 'ChainGPT Pad IDO Vesting',
+    wallet: 'IDO Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x7292d76f371dF773d5BAeAe038b4281fF3f33215',
+    chain: 'BSC',
+    type: 'Trust, Zealy, Airdrops',
+    wallet: 'Airdrop Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x7ae1705cdae974a9dfc165fe01cbeab646ab5296',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Liquidity Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x549d26f0f827a7e13f9f9a7defc30542af754c40',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Pre-Seed Round (ref: tokenomics)', 
+  },
+    {
+    address: '0xab954a5f63e6543f7b7768ce2318d2e8f0c27742',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Seed Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x5af9e219c222670ea308ed028888862e38467eb1',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Team Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x3666749f39bc5e92bdc44b8ef5f63fdb70b7aadc',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Advisors Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x162e2ace8563a62dd4c5e85d775b51275fefb023',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Early-Supporters Round (ref: tokenomics)', 
+  },
+    {
+    address: '0xca2297fd2b8acd4b064ed5a279f7575d0801ddc8',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Development & Marketing Round (ref: tokenomics)', 
+  },
+    {
+    address: '0x9b11579c3f43cbf9a21d1e2dd290c7b76f497224',
+    chain: 'BSC',
+    type: 'TeamFinance Vesting',
+    wallet: 'Ecosystem Incentives Round (ref: tokenomics)', 
+  },
+    {
+    address: '0xd00332c4c11301d23012d3cd883afa02603476f1',
     chain: 'BSC',
     type: 'TeamFinance Vesting',
     wallet: 'KOLs Round (ref: tokenomics)', 
   },
-  {
-    address: '0x0aaf30015ee2393dbeab2d8830f6d244f2dfa0f1',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Farming/Staking (ref: tokenomics)', 
-  },
-  {
-    address: '0x3A53269cAE3281155e51d06Ffe14fdE8DC3662f7',
-    chain: 'BSC',
-    type: 'Vesting Portal (Claim.ChainGPT.org)',
-    wallet: 'Claim Portal (variuos rounds)', 
-  },
-  {
-    address: '0xb63ea5700834975e8349cfd2d54216f7749b0e49',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Liquidity Allocation (ref: tokenomics)', 
-  },
-  {
-    address: '0x9d9ceebf7fb22df325c37591c43c7c0e0f36c6a2',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Private B Round (ref: tokenomics)', 
-  },
-  {
-    address: '0x2d842cf79aa3d6bcef9e37dd9d8809ebab813ad5',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Private A Round (ref: tokenomics)', 
-  },
-  {
-    address: '0x73e49c140c35fc1cc0c716f00d435e22ab8c1305',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Treasury, Team, DAO Fund, Marketing, Development (ref: tokenomics)', 
-  },
-  {
-    address: '0x39f119f1d89ba0e14daded2a5901f3c42135726c',
-    chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'Available Advisory Tokens (ref: tokenomics)', 
-  },
-      {
-    address: '0x926D28476A4bB4F7E4c27C913a3495b3d7393006',
-    chain: 'BSC',
-    type: 'TeamFinance  Contract (Locked)',
-    wallet: 'Seedify  Incubation Fee (1%)', 
-  },
 ];
-
 
 async function getTotalSupply() {
   const cachedTotalSupply = cache.get('totalSupply');
