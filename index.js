@@ -82,8 +82,8 @@ const contractAddresses = [
     {
     address: '0xd00332c4c11301d23012d3cd883afa02603476f1',
     chain: 'BSC',
-    type: 'TeamFinance Vesting',
-    wallet: 'KOLs Round (ref: tokenomics)', 
+    type: 'Decubate Vesting',
+    wallet: 'Misc: KOLs, Airdrops, other (ref: tokenomics)', 
   },
 ];
 
