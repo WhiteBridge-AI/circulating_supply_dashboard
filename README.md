@@ -1,17 +1,17 @@
-# $CGPT Token Circulating Supply Tracker
+# $WBAI Token Circulating Supply Tracker
 
-##### $CGPT Supply Dashboard (default):
-https://supply.chaingpt.org
+##### $WBAI Supply Dashboard (default):
+https://circulating-supply-dashboard.onrender.com/
 
 #### Endpoints:
 ##### Circulating Supply: 
-https://supply.chaingpt.org/supply
+https://circulating-supply-dashboard.onrender.com/supply
 
-##### Total Burnt CGPT Tokens: 
-https://supply.chaingpt.org/burn
+##### Total Burnt WBAI Tokens: 
+https://circulating-supply-dashboard.onrender.com/burn
 
 ##### TotalSupply - Burnt: 
-https://supply.chaingpt.org/totalsupply
+https://circulating-supply-dashboard.onrender.com/totalsupply
 
 ## How To Deploy
 1- Fork this repo <br> 
